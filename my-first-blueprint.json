@@ -1,4 +1,5 @@
 {
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
     "landingPage": "/wp-admin/post.php?post=5&action=edit",
     "preferredVersions": {
         "php": "7.4",
@@ -49,12 +50,12 @@
         },
         {
             "step": "runPHP",
-            "code": {
-                "<?php 
-                    require_once 'wordpress/wp-load.php'; 
+            "code": { 
+                "<?php require_once 'wordpress/wp-load.php'; 
                     wp_insert_post(array(
                         'post_title' => 'Hello from the Playground!', 
-                        'post_status' => 'publish')
+                        'post_status' => 'publish'
+                        )
                     ); 
                 ?>"
             }
